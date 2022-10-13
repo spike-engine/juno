@@ -14,7 +14,7 @@ import (
 // HandleRawMsg implements modules.RawMessageModule
 func (m *Module) HandleRawMsg(index int, msg *codectypes.Any, tx *types.Tx) error {
 	// Get the msg value
-	msgValueBz, err := m.parseMsgValue(msg)
+	msgValueBz, err := m.ParseMsgValue(msg)
 	if err != nil {
 		return err
 	}
@@ -38,9 +38,9 @@ func (m *Module) HandleRawMsg(index int, msg *codectypes.Any, tx *types.Tx) erro
 	))
 }
 
-// parseMsgValue reads the given codectypes.Any message and gets its inner value by serializing
+// ParseMsgValue reads the given codectypes.Any message and gets its inner value by serializing
 // it to a JSON map and removing the @type key
-func (m *Module) parseMsgValue(msg *codectypes.Any) ([]byte, error) {
+func (m *Module) ParseMsgValue(msg *codectypes.Any) ([]byte, error) {
 	// Serialize the msg to its JSON representation
 	msgJSONBz, err := m.cdc.MarshalJSON(msg)
 	if err != nil {
