@@ -5,8 +5,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/forbole/juno/v3/database"
-	"github.com/forbole/juno/v3/types"
+	"github.com/spike-engine/juno/database"
+	"github.com/spike-engine/juno/types"
 )
 
 // HandleMsg represents a message handler that stores the given message inside the proper database table

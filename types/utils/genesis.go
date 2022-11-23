@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/forbole/juno/v3/node"
+	"github.com/spike-engine/juno/node"
 
 	tmjson "github.com/tendermint/tendermint/libs/json"
 	tmos "github.com/tendermint/tendermint/libs/os"

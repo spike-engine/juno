@@ -1,9 +1,9 @@
 package builder
 
 import (
-	"github.com/forbole/juno/v3/database"
+	"github.com/spike-engine/juno/database"
 
-	"github.com/forbole/juno/v3/database/postgresql"
+	"github.com/spike-engine/juno/database/postgresql"
 )
 
 // Builder represents a generic Builder implementation that build the proper database

@@ -1,8 +1,8 @@
 package telemetry
 
 import (
-	"github.com/forbole/juno/v3/modules"
-	"github.com/forbole/juno/v3/types/config"
+	"github.com/spike-engine/juno/modules"
+	"github.com/spike-engine/juno/types/config"
 )
 
 const (

@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/forbole/juno/v3/types/config"
+	"github.com/spike-engine/juno/types/config"
 
 	"github.com/spf13/cobra"
 )

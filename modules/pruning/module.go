@@ -1,12 +1,12 @@
 package pruning
 
 import (
-	"github.com/forbole/juno/v3/types/config"
+	"github.com/spike-engine/juno/types/config"
 
-	"github.com/forbole/juno/v3/logging"
+	"github.com/spike-engine/juno/logging"
 
-	"github.com/forbole/juno/v3/database"
-	"github.com/forbole/juno/v3/modules"
+	"github.com/spike-engine/juno/database"
+	"github.com/spike-engine/juno/modules"
 )
 
 var (

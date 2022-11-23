@@ -3,10 +3,10 @@ package config
 import (
 	"strings"
 
-	databaseconfig "github.com/forbole/juno/v3/database/config"
-	loggingconfig "github.com/forbole/juno/v3/logging/config"
-	nodeconfig "github.com/forbole/juno/v3/node/config"
-	parserconfig "github.com/forbole/juno/v3/parser/config"
+	databaseconfig "github.com/spike-engine/juno/database/config"
+	loggingconfig "github.com/spike-engine/juno/logging/config"
+	nodeconfig "github.com/spike-engine/juno/node/config"
+	parserconfig "github.com/spike-engine/juno/parser/config"
 )
 
 var (

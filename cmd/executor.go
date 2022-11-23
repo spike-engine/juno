@@ -5,14 +5,14 @@ import (
 	"os"
 	"path"
 
-	"github.com/forbole/juno/v3/types/config"
+	"github.com/spike-engine/juno/types/config"
 
-	initcmd "github.com/forbole/juno/v3/cmd/init"
-	migratecmd "github.com/forbole/juno/v3/cmd/migrate"
-	parsecmd "github.com/forbole/juno/v3/cmd/parse"
-	startcmd "github.com/forbole/juno/v3/cmd/start"
+	initcmd "github.com/spike-engine/juno/cmd/init"
+	migratecmd "github.com/spike-engine/juno/cmd/migrate"
+	parsecmd "github.com/spike-engine/juno/cmd/parse"
+	startcmd "github.com/spike-engine/juno/cmd/start"
 
-	"github.com/forbole/juno/v3/types"
+	"github.com/spike-engine/juno/types"
 
 	"github.com/spf13/cobra"
 	"github.com/tendermint/tendermint/libs/cli"

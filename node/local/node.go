@@ -32,8 +32,8 @@ import (
 	"github.com/tendermint/tendermint/store"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/forbole/juno/v3/node"
-	"github.com/forbole/juno/v3/types"
+	"github.com/spike-engine/juno/node"
+	"github.com/spike-engine/juno/types"
 
 	"path"
 	"time"
@@ -42,6 +42,7 @@ import (
 	tmjson "github.com/tendermint/tendermint/libs/json"
 	tmnode "github.com/tendermint/tendermint/node"
 	tmctypes "github.com/tendermint/tendermint/rpc/core/types"
+	tmstate "github.com/tendermint/tendermint/state"
 	dbm "github.com/tendermint/tm-db"
 )
 
@@ -99,7 +100,7 @@ func NewNode(config *Details, txConfig client.TxConfig, codec codec.Codec) (*Nod
 		return nil, err
 	}
 
-	stateStore := sm.NewStore(stateDB)
+	stateStore := sm.NewStore(stateDB, tmstate.StoreOptions{})
 
 	_, genDoc, err := tmnode.LoadStateFromDBOrGenesisDocProvider(stateDB, genesisDocProvider)
 	if err != nil {
@@ -130,7 +131,7 @@ func NewNode(config *Details, txConfig client.TxConfig, codec codec.Codec) (*Nod
 		return nil, err
 	}
 
-	evidencePool, err := evidence.NewPool(evidenceDB, sm.NewStore(stateDB), blockStore)
+	evidencePool, err := evidence.NewPool(evidenceDB, sm.NewStore(stateDB, tmstate.StoreOptions{}), blockStore)
 	if err != nil {
 		return nil, err
 	}
@@ -222,7 +223,7 @@ func createAndStartIndexerService(
 		blockIndexer = &blockidxnull.BlockerIndexer{}
 	}
 
-	indexerService := txindex.NewIndexerService(txIndexer, blockIndexer, eventBus)
+	indexerService := txindex.NewIndexerService(txIndexer, blockIndexer, eventBus, false)
 	indexerService.SetLogger(logger.With("module", "txindex"))
 
 	if err := indexerService.Start(); err != nil {

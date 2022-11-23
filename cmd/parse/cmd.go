@@ -3,11 +3,11 @@ package parse
 import (
 	"github.com/spf13/cobra"
 
-	parsecmdtypes "github.com/forbole/juno/v3/cmd/parse/types"
+	parsecmdtypes "github.com/spike-engine/juno/cmd/parse/types"
 
-	parseblocks "github.com/forbole/juno/v3/cmd/parse/blocks"
-	parsegenesis "github.com/forbole/juno/v3/cmd/parse/genesis"
-	parsetransactions "github.com/forbole/juno/v3/cmd/parse/transactions"
+	parseblocks "github.com/spike-engine/juno/cmd/parse/blocks"
+	parsegenesis "github.com/spike-engine/juno/cmd/parse/genesis"
+	parsetransactions "github.com/spike-engine/juno/cmd/parse/transactions"
 )
 
 // NewParseCmd returns the Cobra command allowing to parse some chain data without having to re-sync the whole database

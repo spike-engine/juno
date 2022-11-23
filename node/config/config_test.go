@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/yaml.v3"
 
-	nodeconfig "github.com/forbole/juno/v3/node/config"
-	"github.com/forbole/juno/v3/node/local"
-	"github.com/forbole/juno/v3/node/remote"
+	nodeconfig "github.com/spike-engine/juno/node/config"
+	"github.com/spike-engine/juno/node/local"
+	"github.com/spike-engine/juno/node/remote"
 )
 
 func TestConfig_UnmarshalYAML(t *testing.T) {
